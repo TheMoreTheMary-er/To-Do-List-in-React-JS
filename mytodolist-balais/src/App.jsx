@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import TaskInput from "./components/TaskInput";
 import TaskItem from './components/TaskItem';
+import Stats from './components/Stats';
 
 function App() {
   const[toDoList, setToDoList] = useState([]);
@@ -14,11 +15,20 @@ function App() {
     taskName !== deletTaskName));
   }
   
+  function toggleCheck(taskName) {
+    setToDoList((prevToDoList) => 
+      prevToDoList.map((task) => 
+        task.taskName === taskName ? {...task, 
+        checked: !task.checked} : task,
+      ),
+    );
+  }
+
   console.log(toDoList);
   return (
     <>
     <div className ="container">
-     <h1>Skibidi Toilet</h1>
+     <h1>To-Do List</h1>
 
      <TaskInput addTask={addTask}/>
      
@@ -27,7 +37,7 @@ function App() {
       <ul className="list-items">
         {toDoList.map((task, key) => (
           <TaskItem task={task} key={key} 
-          deletTask={deletTask}/>
+          deletTask={deletTask} toggleCheck = {toggleCheck}/>
         ))}
       </ul>
 
@@ -36,6 +46,7 @@ function App() {
         ): null}
      </div>
     </div>
+    <Stats />
     </>
   );
 }
