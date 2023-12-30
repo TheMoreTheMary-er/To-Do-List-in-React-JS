@@ -46,7 +46,7 @@ function App() {
         ): null}
      </div>
     </div>
-    <Stats />
+    <Stats toDoList={toDoList} />
     </>
   );
 }
