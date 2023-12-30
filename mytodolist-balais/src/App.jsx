@@ -8,6 +8,13 @@ function App() {
     const newTask = {taskName, checked: false};
     setToDoList([...toDoList, newTask])
   };
+
+  function deletTask(deletTaskName){
+    setToDoList(toDoList.filter(task=> task.
+    taskName !== deletTaskName));
+  }
+  
+  console.log(toDoList);
   return (
     <>
     <div className ="container">
@@ -19,10 +26,14 @@ function App() {
       <span>To Do</span>
       <ul className="list-items">
         {toDoList.map((task, key) => (
-          <TaskItem task={task} key={key} />
-
+          <TaskItem task={task} key={key} 
+          deletTask={deletTask}/>
         ))}
       </ul>
+
+        {toDoList.length === 0 ? ( 
+        <p className='notify'>You Are Done!</p> 
+        ): null}
      </div>
     </div>
     </>
