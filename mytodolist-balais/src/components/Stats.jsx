@@ -6,8 +6,8 @@ const Stats = ({ toDoList }) => {
     <div className="stats">
         <p className="notify">
         {countList ===0 
-        ? 'All tasks are done!' 
-        : `You have ${countList} items on your list.`}
+        ? 'There Are No Tasks Listed Yet' 
+        : `You have ${countList} tasks on your list!`}
         </p>
     </div>
   );

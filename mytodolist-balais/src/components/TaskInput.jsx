@@ -16,7 +16,7 @@ const TaskInput = ({addTask}) => {
     
   return (
   <form className="inputField" onSubmit={handleAddTask}>
-    <input type="text" value={task} placeholder="Add Item"
+    <input type="text" value={task} placeholder="Create New Task"
     onChange={handleInputValue}/>
     <button>+</button>
   </form>

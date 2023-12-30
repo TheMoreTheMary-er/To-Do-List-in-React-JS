@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Monoton:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Titan+One&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -8,22 +8,21 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-body {
-  background: #80c0eb;
+body { /*Color Theme: Phthalo Green Gradient Color Palette*/
+  background: #d5e8db;
 }
 .container {
-  width: 400px;
-  background: #282851;
+  width: 450px;
+  background: #a4c1ad;
   padding: 1rem;
-  /* margin: 5rem auto; */
   margin: 3rem auto;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .container h1 {
   text-align: center;
-  font-family: 'Monoton';
-  color: rgb(161, 160, 160);
-  font-size: 2rem;
+  font-family: 'Titan One';
+  color: 	#12341d;
+  font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 400;
   word-spacing: 5px;
@@ -34,7 +33,7 @@ body {
 .inputField {
   width: 100%;
   padding: 5px 1rem;
-  background: #3e3e5a;
+  background: #6d9078;
   border-radius: 30px;
   display: flex;
   align-items: center;
@@ -44,15 +43,15 @@ body {
 .inputField input {
   background: transparent;
   padding: 10px;
-  color: rgb(161, 160, 160);
+  color:WHITE;
   font-size: 1rem;
 }
 .inputField input::placeholder {
-  color: rgb(161, 160, 160);
+  color: #12341d;
 }
 
 .inputField button {
-  background: #3d79b1;
+  background: #33553e;
   color: #fff;
   font-size: 2rem;
   width: 35px;
@@ -74,7 +73,7 @@ button:hover {
   margin-top: 2rem;
 }
 .toDoList span {
-  color: rgb(161, 160, 160);
+  color: #12341d;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 600;
@@ -88,13 +87,13 @@ button:hover {
   gap: 10px;
 }
 .list-items .items {
-  background: #44446b;
+  background: #6d9078;
   border-radius: 10px;
   padding: 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: rgb(186, 186, 186);
+  color: white;
 }
 input[type='checkbox'] {
   padding: 5px;
@@ -106,12 +105,12 @@ input[type='checkbox'] {
   gap: 15px;
 }
 .items-text div {
-  color: red;
+  color: #33553e;
   overflow: hidden;
 }
 .notify {
   text-align: center;
-  color: rgb(161, 160, 160);
+  color: #12341d;
 }
 
 .delete-icon {
@@ -124,8 +123,8 @@ input[type='checkbox'] {
   display: block;
 }
 .delete-icon:hover {
-  background: #3d79b1;
-  transition: 0.3s;
+  background: #33553e;
+  transition: 0.2s;
 }
 
 .isChecked {
@@ -138,5 +137,5 @@ input[type='checkbox'] {
   bottom: 0;
   width: 100%;
   padding: 10px;
-  background: #282851;
+  background: #a4c1ad;
 }

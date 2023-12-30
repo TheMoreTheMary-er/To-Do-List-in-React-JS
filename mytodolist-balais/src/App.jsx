@@ -28,12 +28,12 @@ function App() {
   return (
     <>
     <div className ="container">
-     <h1>To-Do List</h1>
+     <h1>Checklist</h1>
 
      <TaskInput addTask={addTask}/>
      
      <div className="toDoList">
-      <span>To Do</span>
+      <span>To Do :</span>
       <ul className="list-items">
         {toDoList.map((task, key) => (
           <TaskItem task={task} key={key} 
@@ -42,7 +42,7 @@ function App() {
       </ul>
 
         {toDoList.length === 0 ? ( 
-        <p className='notify'>You Are Done!</p> 
+        <p className='notify'>No Tasks Are Listed</p> 
         ): null}
      </div>
     </div>
